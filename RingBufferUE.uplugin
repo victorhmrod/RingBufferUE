@@ -1,0 +1,28 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0.0",
+  "FriendlyName": "RingBuffer UE",
+  "Description": "UE wrapper for Chris Lomont's SPSC RingBuffer with UE-friendly components/Blueprints.",
+  "Category": "Framework",
+  "CreatedBy": "Victor Henrique",
+  "CreatedByURL": "https://github.com/ChrisLomont/RingBuffer",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "CanContainContent": false,
+  "IsBetaVersion": true,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "RingBufferUE",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "LomontRingBuffer",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}
