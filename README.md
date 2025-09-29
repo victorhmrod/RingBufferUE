@@ -1,39 +1,102 @@
-# RingBufferUE (UE5 Plugin)
+# RingBufferPlugin
 
-UE-friendly wrapper for a Single-Producer Single-Consumer ring buffer.
-- If you place Chris Lomont's `RingBuffer.h` into `Source/RingBufferUE/ThirdParty/LomontRingBuffer/include/RingBuffer/RingBuffer.h`,
-  the macro `RB_LOMONT_AVAILABLE` becomes 1 at build time and you can adapt the calls to use his implementation.
-- If not present, a header-only fallback lock-free SPSC implementation is used.
+A collection of **Blueprint/C++ ready ring buffer components** for Unreal Engine.  
+Each component wraps a different **third-party ring buffer implementation** with a unified API.
 
-## Install
-1. Copy the `RingBufferUE` folder into `<YourProject>/Plugins/`.
-2. (Optional) Put the third-party header at:
-   `Plugins/RingBufferUE/Source/RingBufferUE/ThirdParty/LomontRingBuffer/include/RingBuffer/RingBuffer.h`
-3. Generate project files, build.
+---
 
-## Use
+## Features
+- 🔄 Multiple buffer strategies (lock-free, cache-friendly, mutex-based, etc.)
+- 🎮 Fully usable in **Blueprints** and **C++**
+- 📦 Consistent API across all implementations:
+  - `PutInt`, `GetInt`
+  - `PutFloat`, `GetFloat`
+  - `PutByte`, `GetByte`
+  - `IsEmpty`, `IsFull`
+  - `AvailableToReadBytes`, `AvailableToWriteBytes`
+  - `Clear`
+
+---
+
+## Installation
+1. Copy the plugin into your project's `Plugins` folder:
+   ```
+   YourProject/Plugins/RingBufferPlugin/
+   ```
+2. Enable the plugin in **Edit → Plugins**.
+3. Recompile your project.
+
+---
+
+## Components
+
+| Component                        | Underlying Class                          | Clear Strategy |
+|----------------------------------|-------------------------------------------|----------------|
+| **URingBufferSimpleComponent**   | `SimpleRingBuffer<N>`                      | Reinit (`=`) |
+| **URingBufferAtomicsComponent**  | `AtomicsRingBuffer<N, char, uint32>`       | Drain loop |
+| **URingBufferRelaxedComponent**  | `RelaxedRingBuffer<N, char, uint32, FastRingMod>` | Drain loop |
+| **URingBufferModulusComponent**  | `ModulusRingBuffer<N, char, uint32>`       | Drain loop |
+| **URingBufferFullComponent**     | `FullRingBuffer<N, char, uint32>`          | Drain loop |
+| **URingBufferCacheComponent**    | `CacheRingBuffer<N, char, uint32>`         | Drain loop |
+| **URingBufferBlocksComponent**   | `BlocksRingBuffer<N, char, uint32>`        | Drain loop |
+| **URingBufferGenericComponent**  | `GenericRingBuffer<N, char, uint32>`       | Drain loop |
+| **URingBufferLockedComponent**   | `LockedRingBuffer<N, char, uint32>`        | Drain loop |
+| **URingBufferCoreComponent**     | `Lomont::RingBuffer<N, char, uint32>`      | Drain loop |
+
+---
+
+## Usage in Blueprints
+1. Add any RingBuffer component to an Actor.
+2. Call the available functions:
+
+- `PutInt`, `GetInt`
+- `PutFloat`, `GetFloat`
+- `PutByte`, `GetByte`
+- `IsEmpty`, `IsFull`
+- `AvailableToReadBytes`, `AvailableToWriteBytes`
+- `Clear`
+
+Example (Blueprint graph):
+```
+[BeginPlay] → [PutInt(42)]
+             → [PutFloat(3.14)]
+             → [PutByte(255)]
+             → [AvailableToReadBytes]
+```
+
+---
+
+## Usage in C++
 ```cpp
-// .h
-UPROPERTY(VisibleAnywhere)
-URingBufferComponent* RingBufferComp;
+#include "Components/URingBufferSimpleComponent.h"
 
-// .cpp
-RingBufferComp = NewObject<URingBufferComponent>(this);
-RingBufferComp->RegisterComponent();
-RingBufferComp->Initialize(1024);
-
-FRBFireEvent Ev;
-Ev.TimeSeconds = GetWorld()->TimeSeconds;
-Ev.ShotId = 1;
-Ev.Damage = 12.0f;
-RingBufferComp->EnqueueFireEvent(Ev);
-
-FRBFireEvent Out;
-while (RingBufferComp->DequeueFireEvent(Out))
+void AMyActor::BeginPlay()
 {
-    // process event
+    Super::BeginPlay();
+
+    URingBufferSimpleComponent* Buffer = NewObject<URingBufferSimpleComponent>(this);
+    Buffer->RegisterComponent();
+
+    Buffer->PutInt(123);
+    int32 Value;
+    if (Buffer->GetInt(Value))
+    {
+        UE_LOG(LogTemp, Log, TEXT("Got value: %d"), Value);
+    }
 }
 ```
 
-## License Note
-This plugin includes only a path for the 3rd-party header. Verify licensing of the external repository before distributing it in a commercial product.
+---
+
+## Notes
+- All components share the same interface (`URingBufferBaseComponent`).
+- **Capacity** is currently fixed at `N = 1024` per component.  
+  This can be parameterized later via templates or config if needed.
+- For **Atomics/Relaxed/Modulus/Full/Cache/Blocks/Core/Locked/Generic**: `Clear()` drains the buffer.  
+- For **Simple**: `Clear()` reinitializes via `=`.
+
+---
+
+## License
+- Third-party ring buffer headers belong to their original authors.
+- Unreal integration (components, base class, plugin structure) is MIT licensed.

@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\private\\components\\ringbufferrelaxedcomponent.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\unreal projects\\attachmentsystem\\intermediate\\build\\win64\\x64\\attachmentsystemeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ringbufferplugin\\definitions.ringbufferplugin.h",
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\public\\components\\ringbufferrelaxedcomponent.h",
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\public\\components\\ringbufferbasecomponent.h",
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ringbufferplugin\\uht\\ringbufferbasecomponent.generated.h",
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\public\\thirdparty\\relaxedringbuffer.h",
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\public\\thirdparty\\ringbuffer.h",
+            "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\cassert",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\ucrt\\assert.h",
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\intermediate\\build\\win64\\unrealeditor\\inc\\ringbufferplugin\\uht\\ringbufferrelaxedcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

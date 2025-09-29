@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\private\\ringbufferplugin.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\unreal projects\\attachmentsystem\\intermediate\\build\\win64\\x64\\attachmentsystemeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ringbufferplugin\\definitions.ringbufferplugin.h",
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\public\\ringbufferplugin.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

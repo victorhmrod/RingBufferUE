@@ -1,0 +1,33 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.RingBufferPlugin.cpp.obj": [
+			"RingBufferAtomicsComponent.gen.cpp.obj",
+			"RingBufferBaseComponent.gen.cpp.obj",
+			"RingBufferBlocksComponent.gen.cpp.obj",
+			"RingBufferCacheComponent.gen.cpp.obj",
+			"RingBufferCoreComponent.gen.cpp.obj",
+			"RingBufferFullComponent.gen.cpp.obj",
+			"RingBufferGenericComponent.gen.cpp.obj",
+			"RingBufferLockedComponent.gen.cpp.obj",
+			"RingBufferModulusComponent.gen.cpp.obj",
+			"RingBufferPlugin.init.gen.cpp.obj",
+			"RingBufferRelaxedComponent.gen.cpp.obj",
+			"RingBufferSimpleComponent.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"RingBufferAtomicsComponent.cpp.obj",
+			"RingBufferBaseComponent.cpp.obj",
+			"RingBufferBlocksComponent.cpp.obj",
+			"RingBufferCacheComponent.cpp.obj",
+			"RingBufferCoreComponent.cpp.obj",
+			"RingBufferFullComponent.cpp.obj",
+			"RingBufferGenericComponent.cpp.obj",
+			"RingBufferModulusComponent.cpp.obj",
+			"RingBufferPlugin.cpp.obj",
+			"main.cpp.obj",
+			"RingBufferLockedComponent.cpp.obj",
+			"RingBufferRelaxedComponent.cpp.obj",
+			"RingBufferSimpleComponent.cpp.obj"
+		]
+	}
+}

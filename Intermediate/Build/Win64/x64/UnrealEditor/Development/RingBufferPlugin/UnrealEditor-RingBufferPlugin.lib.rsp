@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-RingBufferPlugin.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:/Unreal Projects/AttachmentSystem/Intermediate/Build/Win64/x64/AttachmentSystemEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"F:/Unreal Projects/AttachmentSystem/Plugins/RingBufferPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/RingBufferPlugin/Module.RingBufferPlugin.cpp.obj"
+"F:/Unreal Projects/AttachmentSystem/Plugins/RingBufferPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/RingBufferPlugin/RingBufferLockedComponent.cpp.obj"
+"F:/Unreal Projects/AttachmentSystem/Plugins/RingBufferPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/RingBufferPlugin/RingBufferRelaxedComponent.cpp.obj"
+"F:/Unreal Projects/AttachmentSystem/Plugins/RingBufferPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/RingBufferPlugin/RingBufferSimpleComponent.cpp.obj"
+"F:/Unreal Projects/AttachmentSystem/Plugins/RingBufferPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/RingBufferPlugin/Default.rc2.res"
+/OUT:"F:/Unreal Projects/AttachmentSystem/Plugins/RingBufferPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/RingBufferPlugin/UnrealEditor-RingBufferPlugin.lib"
