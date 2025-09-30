@@ -90,7 +90,10 @@
             "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\private\\components\\ringbuffercorecomponent.cpp",
             "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\private\\components\\ringbufferfullcomponent.cpp",
             "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\private\\components\\ringbuffergenericcomponent.cpp",
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\private\\components\\ringbufferlockedcomponent.cpp",
             "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\private\\components\\ringbuffermoduluscomponent.cpp",
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\private\\components\\ringbufferrelaxedcomponent.cpp",
+            "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\private\\components\\ringbuffersimplecomponent.cpp",
             "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\private\\ringbufferplugin.cpp",
             "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\public\\ringbufferplugin.h",
             "f:\\unreal projects\\attachmentsystem\\plugins\\ringbufferplugin\\source\\ringbufferplugin\\public\\thirdparty\\main.cpp"

@@ -40,6 +40,7 @@
 "F:/Unreal Projects/AttachmentSystem/Plugins/RingBufferPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/RingBufferPlugin/Module.RingBufferPlugin.cpp.obj"
 "F:/Unreal Projects/AttachmentSystem/Plugins/RingBufferPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/RingBufferPlugin/RingBufferLockedComponent.cpp.obj"
 "F:/Unreal Projects/AttachmentSystem/Plugins/RingBufferPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/RingBufferPlugin/RingBufferRelaxedComponent.cpp.obj"
+"F:/Unreal Projects/AttachmentSystem/Plugins/RingBufferPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/RingBufferPlugin/RingBufferSimpleComponent.cpp.obj"
 "F:/Unreal Projects/AttachmentSystem/Plugins/RingBufferPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/RingBufferPlugin/Default.rc2.res"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/Core/UnrealEditor-Core.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/CoreUObject/UnrealEditor-CoreUObject.lib"

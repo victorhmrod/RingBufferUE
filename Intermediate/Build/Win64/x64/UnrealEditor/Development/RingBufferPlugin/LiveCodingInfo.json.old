@@ -23,11 +23,11 @@
 			"RingBufferFullComponent.cpp.obj",
 			"RingBufferGenericComponent.cpp.obj",
 			"RingBufferModulusComponent.cpp.obj",
-			"RingBufferSimpleComponent.cpp.obj",
 			"RingBufferPlugin.cpp.obj",
 			"main.cpp.obj",
 			"RingBufferLockedComponent.cpp.obj",
-			"RingBufferRelaxedComponent.cpp.obj"
+			"RingBufferRelaxedComponent.cpp.obj",
+			"RingBufferSimpleComponent.cpp.obj"
 		]
 	}
 }
